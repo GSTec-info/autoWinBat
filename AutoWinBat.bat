@@ -125,7 +125,7 @@ if %opcao%==S ( cls & GOTO COPIA_ROBOCOPY ) else ( GOTO MENU_ALL )
 cls
 title Script para altera‡Æo da impressora padrÆo do sistema -- Created by Generson Avelino
 
-pythony --version
+python --version
 if %ERRORLEVEL% EQU 0 ( GOTO EXEC_CHANGE_PRINTER_DEFAULT ) else ( GOTO ERRO_CHANGE_PRINTER_DEFAULT )
 
 :ERRO_CHANGE_PRINTER_DEFAULT
