@@ -20,12 +20,12 @@ echo   =========================================================================
 echo   ==                            AutoWinBat                               ==
 echo   =========================================================================
 echo   ==                                                                     ==
-echo   ==  (1) - C¢pia com 'Robocopy'                                         ==
-echo   ==  (2) - Alterar impressora padrÆo -- Usando python                   ==
-echo   ==  (3) - Abrir fila de impressÆo de impressora                        ==
+echo   ==  (1) - CÂ¢pia com 'Robocopy'                                         ==
+echo   ==  (2) - Alterar impressora padrÃ†o -- Usando python                   ==
+echo   ==  (3) - Abrir fila de impressÃ†o de impressora                        ==
 echo   ==  (4) - Habilitar wallpaper customizado na tela de login do windows  ==
 echo   ==  (5) - Instalar gpedit no Windows 10 home                           ==
-echo   ==  (6) - Corrigir miniaturas de ¡cones                                ==
+echo   ==  (6) - Corrigir miniaturas de Â¡cones                                ==
 echo   ==  (7) - Gerenciamento de compartilhamentos de rede                   ==
 echo   ==  (8) - Matar processo                                               ==
 echo   ==  (9) - Mudar IP                                                     ==
@@ -49,73 +49,73 @@ if %opMenuAll%==0 ( goto :eof ) else ( goto MENU_ALL )
 
 
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
-:: (1) - Cópia com 'Robocopy'
+:: (1) - CÃ³pia com 'Robocopy'
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
 
 :COPIA_ROBOCOPY
 cls
-title Scrit para c¢pia de arquivos usando 'Robocopy' -- Created by Generson Avelino
+title Scrit para cÂ¢pia de arquivos usando 'Robocopy' -- Created by Generson Avelino
 
 echo   ************************************
 echo   ** Created by Generson Avelino    **
 echo   ************************************
 echo.
-echo   ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
-echo   ²²                                                                                                ²²
-echo   ²²           ------------  Scrit para c¢pia de arquivos usando 'Robocopy'  ------------           ²²
-echo   ²²                                                                                                ²²
-echo   ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
+echo   Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²
+echo   Â²Â²                                                                                                Â²Â²
+echo   Â²Â²           ------------  Scrit para cÂ¢pia de arquivos usando 'Robocopy'  ------------           Â²Â²
+echo   Â²Â²                                                                                                Â²Â²
+echo   Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²Â²
 echo.
 echo         Caminhos de origem sugeridos para Backup:
-echo           - %userprofile%                            (Pasta do usu rio)
+echo           - %userprofile%                            (Pasta do usuÂ rio)
 echo           - %userprofile%\AppData\Local\Google\      (Pasta do Google Chrome)
 echo.                        
-echo   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-echo   °°    Pastas e arquivos sugeridos para ignorar durante a copia da pasta do usu rio:               °°
-echo   °°      - AppData                                                                                 °°
-echo   °°      - Cookies                                                                                 °°
-echo   °°                                                                                                °°
-echo   °°    ***Obs: - Digite "/XD" antes do nome para pastas e "/XF" antes do nome para arquivos        °°
-echo   °°                                                                                                °°
-echo   °°              Exemplo: /XD "Pasta 1" "Pasta 2"                                                  °°
-echo   °°                       /XF "Arquivo 1" "Arquivo 2"                                              °°
-echo   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+echo   Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°
+echo   Â°Â°    Pastas e arquivos sugeridos para ignorar durante a copia da pasta do usuÂ rio:               Â°Â°
+echo   Â°Â°      - AppData                                                                                 Â°Â°
+echo   Â°Â°      - Cookies                                                                                 Â°Â°
+echo   Â°Â°                                                                                                Â°Â°
+echo   Â°Â°    ***Obs: - Digite "/XD" antes do nome para pastas e "/XF" antes do nome para arquivos        Â°Â°
+echo   Â°Â°                                                                                                Â°Â°
+echo   Â°Â°              Exemplo: /XD "Pasta 1" "Pasta 2"                                                  Â°Â°
+echo   Â°Â°                       /XF "Arquivo 1" "Arquivo 2"                                              Â°Â°
+echo   Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°
 echo.
 set origem="" 
 set /P origem="-- Digite a origem: "
-if not exist "%origem%" (echo. & echo ---- O caminho %origem% nÆo existe. Verifique-o por favor & echo. & pause & GOTO COPIA_ROBOCOPY)
+if not exist "%origem%" (echo. & echo ---- O caminho %origem% nÃ†o existe. Verifique-o por favor & echo. & pause & GOTO COPIA_ROBOCOPY)
 set destino=""
 set /P destino="-- Digite o Destino: "
-if not exist "%destino%" (echo. & echo ---- O caminho %destino% nÆo existe. & GOTO opcao_criar_destino_COPIA_ROBOCOPY ) else ( GOTO continua_COPIA_ROBOCOPY )
+if not exist "%destino%" (echo. & echo ---- O caminho %destino% nÃ†o existe. & GOTO opcao_criar_destino_COPIA_ROBOCOPY ) else ( GOTO continua_COPIA_ROBOCOPY )
 
 
 
 :opcao_criar_destino_COPIA_ROBOCOPY
 set op=s
 set /P op="---- Deseja criar? (s/n): "
-if %op%==s (mkdir "%destino%" & if exist "%destino%" (echo ---- Pasta %destino% criada!! & GOTO continua_COPIA_ROBOCOPY ) else (echo ---- Erro na cria‡Æo da pasta & timeout 5 & GOTO COPIA_ROBOCOPY)) else (echo. & echo Reiniciando programa... & timeout 5 & GOTO COPIA_ROBOCOPY)
-if %op%==S (mkdir "%destino%" & if exist "%destino%" (echo ---- Pasta %destino% criada!! & GOTO continua_COPIA_ROBOCOPY ) else (echo ---- Erro na cria‡Æo da pasta & timeout 5 & GOTO COPIA_ROBOCOPY)) else (echo. & echo Reiniciando programa... & timeout 5 & GOTO COPIA_ROBOCOPY)
+if %op%==s (mkdir "%destino%" & if exist "%destino%" (echo ---- Pasta %destino% criada!! & GOTO continua_COPIA_ROBOCOPY ) else (echo ---- Erro na criaâ€¡Ã†o da pasta & timeout 5 & GOTO COPIA_ROBOCOPY)) else (echo. & echo Reiniciando programa... & timeout 5 & GOTO COPIA_ROBOCOPY)
+if %op%==S (mkdir "%destino%" & if exist "%destino%" (echo ---- Pasta %destino% criada!! & GOTO continua_COPIA_ROBOCOPY ) else (echo ---- Erro na criaâ€¡Ã†o da pasta & timeout 5 & GOTO COPIA_ROBOCOPY)) else (echo. & echo Reiniciando programa... & timeout 5 & GOTO COPIA_ROBOCOPY)
 
 
 
 :continua_COPIA_ROBOCOPY
 echo.
-echo -- Digite alguma pasta ou arquivo para ignorar durante a c¢pia
+echo -- Digite alguma pasta ou arquivo para ignorar durante a cÂ¢pia
 set exclusoes=""
-set /P exclusoes="-- (Caso nÆo queira, pressione 'Enter'): "
+set /P exclusoes="-- (Caso nÃ†o queira, pressione 'Enter'): "
 echo.
 echo.
-echo -- Preparando para executar a c¢pia, Aguarde por favor...
+echo -- Preparando para executar a cÂ¢pia, Aguarde por favor...
 echo.
 timeout 5 /NOBREAK
-robocopy "%origem%" "%destino%" /R:0 /W:0 /S /XF "desktop.ini" "ntuser.dat" "ntuser.ini" /XD "Ambiente de ImpressÆo" "Ambiente de Rede" "System Volume Information" "Dados de Aplicativos" "Application Data" "Local Settings" "Configura‡äes Locais" %exclusoes%
+robocopy "%origem%" "%destino%" /R:0 /W:0 /S /XF "desktop.ini" "ntuser.dat" "ntuser.ini" /XD "Ambiente de ImpressÃ†o" "Ambiente de Rede" "System Volume Information" "Dados de Aplicativos" "Application Data" "Local Settings" "Configuraâ€¡Ã¤es Locais" %exclusoes%
 echo.
 echo.
-echo  ÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂ
-echo  ³                                         **** Conclu¡do ****                                      ³
-echo  ÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁ
+echo  Ã‚Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã‚
+echo  Â³                                         **** ConcluÂ¡do ****                                      Â³
+echo  ÃÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã
 echo.
-set /P opcao="-- Deseja Fazer outra c¢pia? (s/n): "
+set /P opcao="-- Deseja Fazer outra cÂ¢pia? (s/n): "
 
 if %opcao%==s ( cls & GOTO COPIA_ROBOCOPY ) else ( GOTO MENU_ALL )
 if %opcao%==S ( cls & GOTO COPIA_ROBOCOPY ) else ( GOTO MENU_ALL )
@@ -123,12 +123,12 @@ if %opcao%==S ( cls & GOTO COPIA_ROBOCOPY ) else ( GOTO MENU_ALL )
 
 
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
-:: (2) - Alterar impressora padrão -- python
+:: (2) - Alterar impressora padrÃ£o -- python
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
 
 :CHANGE_PRINTER_DEFAULT
 cls
-title Script para altera‡Æo da impressora padrÆo do sistema -- Created by Generson Avelino
+title Script para alteraâ€¡Ã†o da impressora padrÃ†o do sistema -- Created by Generson Avelino
 
 python --version
 if %ERRORLEVEL% EQU 0 ( GOTO EXEC_CHANGE_PRINTER_DEFAULT ) else ( GOTO ERRO_CHANGE_PRINTER_DEFAULT )
@@ -139,12 +139,12 @@ echo.
 echo   ===================================================================
 echo   ==                      **** ERRO ****                           ==
 echo   ===================================================================
-echo   ==    Python nÆo instalado ou NÆo consta na vari vel de          ==
+echo   ==    Python nÃ†o instalado ou NÃ†o consta na variÂ vel de          ==
 echo   ==  ambiente do Windows!!!                                       ==
 echo   ===================================================================
 echo   ==                                                               ==
 echo   ==  (1) - Reiniciar script                                       ==
-echo   ==  (2) - Voltar a p gina inicial                                ==
+echo   ==  (2) - Voltar a pÂ gina inicial                                ==
 echo   ==                                                               ==
 echo   ===================================================================
 set opcao=0
@@ -162,14 +162,14 @@ echo   ************************************
 echo.
 :: ---Listagem de impressoras instaladas
 echo   ************************************************************************
-echo   ** OBS: Caso ocorra erro na execu‡Æo, verifique                       **
-echo   **      se o m¢dulo 'pywin32' est  instalado e se a                   **
-echo   **      versÆo do Python ‚ a 3.8 ou acima                             **
+echo   ** OBS: Caso ocorra erro na execuâ€¡Ã†o, verifique                       **
+echo   **      se o mÂ¢dulo 'pywin32' estÂ  instalado e se a                   **
+echo   **      versÃ†o do Python â€š a 3.8 ou acima                             **
 echo   **                                                                    **
-echo   **      Para instalar o m¢dulo execute:                               ** 
+echo   **      Para instalar o mÂ¢dulo execute:                               ** 
 echo   **          'pip install pywin32'                                     **
 echo   **                                                                    **
-echo   **      Para instalar o Python, fa‡a o download em:                   **
+echo   **      Para instalar o Python, faâ€¡a o download em:                   **
 echo   **           https://www.python.org/downloads/                        **
 echo   ************************************************************************
 echo.
@@ -178,21 +178,21 @@ echo -- Listando Impressoras Instaladas, por favor aguarde...
 echo.
 wmic printer get name
 echo.
-:: ---Variável para definir impressora padrão
+:: ---VariÃ¡vel para definir impressora padrÃ£o
 echo ------------------------------------------------------------------------
 echo -- Define a nova impressora padrao:                                   --
 set /P i="-- "
 
 :: ---Montagem de programa em Python
-:: Importação do módulo de impressão do Windows
+:: ImportaÃ§Ã£o do mÃ³dulo de impressÃ£o do Windows
 echo import win32print >C:\ProgramData\setprintdefault.py
-:: Execução de subrotina para definir impressora padrão
+:: ExecuÃ§Ã£o de subrotina para definir impressora padrÃ£o
 echo win32print.SetDefaultPrinter(r"%i%") >>C:\ProgramData\setprintdefault.py
 
 :: ---Executando arquivo Python
 python C:\ProgramData\setprintdefault.py
 
-:: ---Verificando a alteração
+:: ---Verificando a alteraÃ§Ã£o
 echo.
 echo ------------------------------------------------------------------------
 echo -- Verificando alteracao...
@@ -216,7 +216,7 @@ if %op% EQU S ( goto CHANGE_PRINTER_DEFAULT ) else ( goto MENU_ALL )
 
 
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
-:: (3) - Abrir fila de impressão de impressora
+:: (3) - Abrir fila de impressÃ£o de impressora
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
 
 :OPEN_QUEUE_PRINTER 
@@ -226,7 +226,7 @@ echo ** Created by Generson Avelino    **
 echo ************************************
 echo.
 echo *********************************************
-echo **  Abrir fila de impressão de impressora  **
+echo **  Abrir fila de impressÃ£o de impressora  **
 echo *********************************************
 echo.
 echo ------------------------------------------------------------
@@ -286,7 +286,7 @@ mkdir %pathToImageWindows7%
 mkdir %pathToImageWindows81And10%
 echo.
 echo ------------------------------------------------------------------------
-echo -- C¢pia do Wallpaper (Formato: JPG)                                  --
+echo -- CÂ¢pia do Wallpaper (Formato: JPG)                                  --
 echo ------------------------------------------------------------------------
 echo --   Por favor coloque o caminho da imagem que deseja definir ou      --
 echo -- arraste a imagem para dentro da janela.                            --
@@ -362,11 +362,11 @@ echo.
 echo   ------------------------------------------------------------------------
 echo   --                    AVISO!!!                                        --
 echo   ------------------------------------------------------------------------
-ECHO   --  Fa‡a esse procedimento se seu sistema nÆo tiver o gerenciador de  --
-echo   -- Pol¡tica de grupo.                                                 --
+ECHO   --  Faâ€¡a esse procedimento se seu sistema nÃ†o tiver o gerenciador de  --
+echo   -- PolÂ¡tica de grupo.                                                 --
 echo   ------------------------------------------------------------------------
 echo   -- (1) - Continuar                                                    --
-echo   -- (2) - Voltar a p gina inicial                                      --
+echo   -- (2) - Voltar a pÂ gina inicial                                      --
 echo   ------------------------------------------------------------------------
 set op=2
 set /P op="----- "
@@ -389,7 +389,7 @@ goto MENU_ALL
 
 
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
-:: (6) - Corrigir miniaturas de ícones
+:: (6) - Corrigir miniaturas de Ã­cones
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
 
 :RESET_ICONS
@@ -399,7 +399,7 @@ echo ** Created by Generson Avelino    **
 echo ************************************
 echo.
 echo *************************************
-echo **  Corrigir miniaturas de ícones  **
+echo **  Corrigir miniaturas de Ã­cones  **
 echo *************************************
 echo.
 echo ------------------------------------------------------------------------
@@ -408,7 +408,7 @@ echo.
 taskkill /IM explorer.exe /F
 echo.
 echo ------------------------------------------------------------------------
-echo -- Excluindo cache de ¡cones
+echo -- Excluindo cache de Â¡cones
 echo.
 DEL /A /F /Q "%localappdata%\IconCache.db"
 DEL /A /F /Q "%localappdata%\Microsoft\Windows\Explorer\iconcache*"
@@ -419,7 +419,7 @@ echo.
 start /D %windir%\System32 /B explorer.exe
 echo.
 echo ------------------------------------------------------------------------
-echo -- Voltando a pasta de execu‡Æo
+echo -- Voltando a pasta de execuâ€¡Ã†o
 echo.
 timeout /T 4 /NOBREAK
 explorer.exe .\
@@ -448,7 +448,7 @@ echo --Compartilhamentos encontrados:
 net share
 echo.
 echo   -------------------------------------------------------------
-echo   --    Selecione uma Op‡Æo                                  --
+echo   --    Selecione uma Opâ€¡Ã†o                                  --
 echo   -------------------------------------------------------------
 echo   -- ( 1 ) Excluir compartilhamento                          --
 echo   -- ( 2 ) Criar compartilhamento                            --
@@ -469,7 +469,7 @@ net share "%nameShare%" /delete
 echo.
 echo -------------------------------------------------------------
 set reset=n
-set /P reset="-- Deseja come‡ar denovo? (s/n): "
+set /P reset="-- Deseja comeâ€¡ar denovo? (s/n): "
 
 if %reset%==s ( goto MANAGER_SHARE_NETWORK ) else ( goto MENU_ALL )
 if %reset%==S ( goto MANAGER_SHARE_NETWORK ) else ( goto MENU_ALL )
@@ -482,7 +482,7 @@ set nameShare=" "
 set /P nameShare="-- Digite o nome do compartilhamento: "
 set pathShare=" "
 set /P pathShare="-- Digite o local para compartilhar: "
-echo -- Permissäes (READ, CHANGE, FULL):
+echo -- PermissÃ¤es (READ, CHANGE, FULL):
 set permissions=" "
 set /P permissions="-- "
 
@@ -490,7 +490,7 @@ net share "%nameShare%"=%pathShare% /GRANT:todos,%permissions% /UNLIMITED
 echo.
 echo -------------------------------------------------------------
 set reset=n
-set /P reset="-- Deseja come‡ar denovo? (s/n): "
+set /P reset="-- Deseja comeâ€¡ar denovo? (s/n): "
 
 if %reset%==s ( goto MANAGER_SHARE_NETWORK ) else ( goto MENU_ALL )
 if %reset%==S ( goto MANAGER_SHARE_NETWORK ) else ( goto MENU_ALL )
@@ -511,27 +511,27 @@ echo   ** Created by Generson Avelino    **
 echo   ************************************
 start "Processos Atuais" /D %windir%\System32 /I cmd /c "color 17 && tasklist && echo. && pause"
 echo.
-echo ±------------------------------------------------------------- 
-echo ±-- Digite o nome do programa que deseja finalizar:
-echo ±-- Formato: ('nome do programa'.'extensÆo do programa')
+echo Â±------------------------------------------------------------- 
+echo Â±-- Digite o nome do programa que deseja finalizar:
+echo Â±-- Formato: ('nome do programa'.'extensÃ†o do programa')
 set nameProgram=" " 
-set /p nameProgram="±------ "
-echo ±
+set /p nameProgram="Â±------ "
+echo Â±
 
 :KILL_PROCESS_optionInit
 set option=" "     
-set /p option=" ±-- Encerrar  rvore inteira do programa? (s/n): "
-echo ±
-echo ±-------------------------------------------------------------
-if %option% EQU s (taskkill /IM %nameProgram% /F /T & goto KILL_PROCESS_optionExit) else (if %option% EQU S (taskkill /IM %nameProgram% /F /T & goto KILL_PROCESS_optionExit) else (if %option% EQU n (taskkill /IM %nameProgram% /F & goto KILL_PROCESS_optionExit) else (if %option% EQU N (taskkill /IM %nameProgram% /F & goto KILL_PROCESS_optionExit) else (echo ±****Op‡Æo Incorreta**** & echo. & goto KILL_PROCESS_optionInit))))
+set /p option=" Â±-- Encerrar Â rvore inteira do programa? (s/n): "
+echo Â±
+echo Â±-------------------------------------------------------------
+if %option% EQU s (taskkill /IM %nameProgram% /F /T & goto KILL_PROCESS_optionExit) else (if %option% EQU S (taskkill /IM %nameProgram% /F /T & goto KILL_PROCESS_optionExit) else (if %option% EQU n (taskkill /IM %nameProgram% /F & goto KILL_PROCESS_optionExit) else (if %option% EQU N (taskkill /IM %nameProgram% /F & goto KILL_PROCESS_optionExit) else (echo Â±****Opâ€¡Ã†o Incorreta**** & echo. & goto KILL_PROCESS_optionInit))))
 
 :KILL_PROCESS_optionExit
-echo ±-------------------------------------------------------------
-echo ±
-echo ± 
+echo Â±-------------------------------------------------------------
+echo Â±
+echo Â± 
 set optionExit=n
-set /p optionExit="±-- Deseja continuar? (s/n): "
-if %optionExit% EQU s (goto KILL_PROCESS) else (if %optionExit% EQU S (goto KILL_PROCESS) else (if %optionExit% EQU n (GOTO MENU_ALL) else (if %optionExit% EQU N (GOTO MENU_ALL) else (echo ±**Op‡Æo Incorreta**** & echo. & goto KILL_PROCESS_optionExit))))
+set /p optionExit="Â±-- Deseja continuar? (s/n): "
+if %optionExit% EQU s (goto KILL_PROCESS) else (if %optionExit% EQU S (goto KILL_PROCESS) else (if %optionExit% EQU n (GOTO MENU_ALL) else (if %optionExit% EQU N (GOTO MENU_ALL) else (echo Â±**Opâ€¡Ã†o Incorreta**** & echo. & goto KILL_PROCESS_optionExit))))
 
 
 
@@ -540,7 +540,7 @@ if %optionExit% EQU s (goto KILL_PROCESS) else (if %optionExit% EQU S (goto KILL
 ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++::
 
 :CHANGE_IP
-title Script para Mudan‡a de IP -- Created by Generson Avelino
+title Script para Mudanâ€¡a de IP -- Created by Generson Avelino
  
 cls
 echo   ************************************
@@ -548,7 +548,7 @@ echo   ** Created by Generson Avelino    **
 echo   ************************************
 echo.
 echo   ########################################################
-echo   ##            Script para Mudan‡a de IP               ##
+echo   ##            Script para Mudanâ€¡a de IP               ##
 echo   ########################################################
 echo.
 echo -----Interfaces Encontradas:
@@ -559,29 +559,28 @@ set interface=" "
 set /P interface="-----> Nome da interface a ser modificada: "
 echo. && echo IP Atual de "%interface%": && echo. && netsh interface ipv4 show ipaddresses "%interface%" | find /I "endere" && echo.
 set ip=" "
-set /P ip="-----> Novo Ip: "
-::set /P mSub="----> M scara de Sub.: "
-::set /P gate="------------> Gateway: "
+set /P ip="--------------> Novo Ip: "
+set /P mSub="----> MÂ scara de Sub.: "
+set /P gate="------------> Gateway: "
 echo.
 echo.
 echo -------------------------------------------------------------
-echo -----Mudando DNS prim rio e secund rio (Respectivamente)
+echo -----Mudando DNS primÂ rio e secundÂ rio (Respectivamente)
 timeout /T 3 /NOBREAK
-netsh interface ipv4 set dnsserver "%interface%" static 192.168.1.10 primary
-if %errorlevel%==0 ( echo --DNS Prim rio alterado com sucesso!! )
-netsh interface ipv4 add dnsserver "%interface%" 8.8.8.8
-if %errorlevel%==0 ( echo --DNS Secud rio alterado com sucesso!! )
+netsh interface ipv4 set dnsserver "%interface%" static 8.8.8.8 primary
+if %errorlevel%==0 ( echo --DNS PrimÂ rio alterado com sucesso!! )
+netsh interface ipv4 add dnsserver "%interface%" 8.8.4.4
+if %errorlevel%==0 ( echo --DNS SecudÂ rio alterado com sucesso!! )
 echo.
 echo.
 echo -------------------------------------------------------------
 echo -----Mudando IP:
-:: netsh interface ipv4 set address "%interface%" static %ip% %mSub% %gate%
-netsh interface ipv4 set address "%interface%" static %ip% 255.255.255.0 192.168.1.100
+netsh interface ipv4 set address "%interface%" static %ip% %mSub% %gate%
 if %errorlevel%==0 ( echo --IP alterado com sucesso!! )
 echo.
 echo.
 echo -------------------------------------------------------------
-echo -----Revisar configura‡äes de "%interface%"?(s/n):
+echo -----Revisar configuraâ€¡Ã¤es de "%interface%"?(s/n):
 set rev=n
 set /P rev="----- "
 echo.
