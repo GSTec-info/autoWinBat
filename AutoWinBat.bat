@@ -436,10 +436,6 @@ GOTO MENU_ALL
 title Gerenciar compartilhamentos de rede -- Created by Generson Avelino
 cls
 echo.
-echo Iniciando, aguarde...
-if exist %systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe ( %systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -command "Get-SmbShare" >C:\Windows\Temp\share.txt ) else ( powershell.exe -command "Get-SmbShare" >C:\Windows\Temp\share.txt )
-cls
-echo.
 echo   ************************************
 echo   ** Created by Generson Avelino    **
 echo   ************************************
@@ -449,9 +445,7 @@ echo   ##         Gerenciar compartilhamentos de rede           ##
 echo   ###########################################################
 echo.
 echo --Compartilhamentos encontrados:
-::net share
-type C:\Windows\Temp\share.txt
-del /Q /F C:\Windows\Temp\share.txt
+net share
 echo   -------------------------------------------------------------
 echo   --    Selecione uma Op‡Æo                                  --
 echo   -------------------------------------------------------------
