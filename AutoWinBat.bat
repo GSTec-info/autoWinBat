@@ -11,10 +11,7 @@
 cls
 title AutoWinBat -- ** Created by Generson Avelino **
 color 17
-echo.
-echo   ************************************
-echo   ** Created by Generson Avelino    **
-echo   ************************************
+
 echo.
 echo   =========================================================================
 echo   ==                            AutoWinBat                               ==
@@ -56,9 +53,6 @@ if %opMenuAll%==0 ( goto :eof ) else ( goto MENU_ALL )
 cls
 title Scrit para c¢pia de arquivos usando 'Robocopy' -- Created by Generson Avelino
 
-echo   ************************************
-echo   ** Created by Generson Avelino    **
-echo   ************************************
 echo.
 echo   ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
 echo   ²²                                                                                                ²²
@@ -69,17 +63,7 @@ echo.
 echo         Caminhos de origem sugeridos para Backup:
 echo           - %userprofile%                            (Pasta do usu rio)
 echo           - %userprofile%\AppData\Local\Google\      (Pasta do Google Chrome)
-echo.                        
-echo   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-echo   °°    Pastas e arquivos sugeridos para ignorar durante a copia da pasta do usu rio:               °°
-echo   °°      - AppData                                                                                 °°
-echo   °°      - Cookies                                                                                 °°
-echo   °°                                                                                                °°
-echo   °°    ***Obs: - Digite "/XD" antes do nome para pastas e "/XF" antes do nome para arquivos        °°
-echo   °°                                                                                                °°
-echo   °°              Exemplo: /XD "Pasta 1" "Pasta 2"                                                  °°
-echo   °°                       /XF "Arquivo 1" "Arquivo 2"                                              °°
-echo   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+echo.
 echo.
 set origem="" 
 set /P origem="-- Digite a origem: "
@@ -99,6 +83,17 @@ if %op%==S (mkdir "%destino%" & if exist "%destino%" (echo ---- Pasta %destino% 
 
 
 :continua_COPIA_ROBOCOPY
+echo.                        
+echo   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+echo   °°    Pastas e arquivos sugeridos para ignorar durante a copia da pasta do usu rio:               °°
+echo   °°      - AppData                                                                                 °°
+echo   °°      - Cookies                                                                                 °°
+echo   °°                                                                                                °°
+echo   °°    ***Obs: - Digite "/XD" antes do nome para pastas e "/XF" antes do nome para arquivos        °°
+echo   °°                                                                                                °°
+echo   °°              Exemplo: /XD "Pasta 1" "Pasta 2"                                                  °°
+echo   °°                       /XF "Arquivo 1" "Arquivo 2"                                              °°
+echo   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 echo.
 echo -- Digite alguma pasta ou arquivo para ignorar durante a c¢pia
 set exclusoes=""
@@ -156,9 +151,6 @@ if %opcao% EQU 2 ( goto MENU_ALL ) else ( goto MENU_ALL )
 
 :EXEC_CHANGE_PRINTER_DEFAULT
 cls
-echo   ************************************
-echo   ** Created by Generson Avelino    **
-echo   ************************************
 echo.
 :: ---Listagem de impressoras instaladas
 echo   ************************************************************************
@@ -221,13 +213,10 @@ if %op% EQU S ( goto CHANGE_PRINTER_DEFAULT ) else ( goto MENU_ALL )
 
 :OPEN_QUEUE_PRINTER 
 cls
-echo ************************************
-echo ** Created by Generson Avelino    **
-echo ************************************
 echo.
-echo *********************************************
-echo **  Abrir fila de impressão de impressora  **
-echo *********************************************
+echo   *********************************************
+echo   **  Abrir fila de impressão de impressora  **
+echo   *********************************************
 echo.
 echo ------------------------------------------------------------
 echo -- Impressoras Detectadas:
@@ -254,13 +243,11 @@ if %op%==S ( goto OPEN_QUEUE_PRINTER ) else ( goto MENU_ALL )
 :CHANGE_WALLPAPER_LOGIN_SCREEN
 cls
 title Habilitar wallpaper customizado na tela de login do windows
-echo ************************************
-echo ** Created by Generson Avelino    **
-echo ************************************
+
 echo.
-echo *******************************************************************
-echo **      Wallpaper customizado na tela de login do windows        **
-echo *******************************************************************
+echo   *******************************************************************
+echo   **      Wallpaper customizado na tela de login do windows        **
+echo   *******************************************************************
 echo.
 echo   ===================================================================
 echo   ==                                                               ==
@@ -350,13 +337,11 @@ goto CHANGE_WALLPAPER_LOGIN_SCREEN
 
 :INSTALL_GPEDIT_WIN10HOME
 cls
-echo ************************************
-echo ** Created by Generson Avelino    **
-echo ************************************
+
 echo.
-echo ******************************************
-echo **  Instalar gpedit no Windows 10 home  **
-echo ******************************************
+echo   ******************************************
+echo   **  Instalar gpedit no Windows 10 home  **
+echo   ******************************************
 echo.
 echo.
 echo   ------------------------------------------------------------------------
@@ -394,13 +379,11 @@ goto MENU_ALL
 
 :RESET_ICONS
 cls
-echo ************************************
-echo ** Created by Generson Avelino    **
-echo ************************************
+
 echo.
-echo *************************************
-echo **  Corrigir miniaturas de ícones  **
-echo *************************************
+echo   *************************************
+echo   **  Corrigir miniaturas de ícones  **
+echo   *************************************
 echo.
 echo ------------------------------------------------------------------------
 echo -- Encerrando "explorer.exe"
@@ -436,9 +419,7 @@ GOTO MENU_ALL
 title Gerenciar compartilhamentos de rede -- Created by Generson Avelino
 cls
 echo.
-echo   ************************************
-echo   ** Created by Generson Avelino    **
-echo   ************************************
+
 echo.
 echo   ###########################################################
 echo   ##         Gerenciar compartilhamentos de rede           ##
@@ -485,7 +466,7 @@ echo -- Permissäes (READ, CHANGE, FULL):
 set permissions=" "
 set /P permissions="-- "
 
-net share "%nameShare%"=%pathShare% /GRANT:todos,%permissions% /UNLIMITED
+net share "%nameShare%"="%pathShare%" /GRANT:todos,%permissions% /UNLIMITED
 echo.
 echo -------------------------------------------------------------
 set reset=n
@@ -503,12 +484,12 @@ if %reset%==S ( goto MANAGER_SHARE_NETWORK ) else ( goto MENU_ALL )
 
 :KILL_PROCESS
 title Script (Encerrar Programa com 'Taskkill') -- Created by Generson Avelino
-
-cls
-echo   ************************************
-echo   ** Created by Generson Avelino    **
-echo   ************************************
 start "Processos Atuais" /D %windir%\System32 /I cmd /c "color 17 && tasklist && echo. && pause"
+cls
+echo.
+echo   ###########################################################
+echo   ##                    Matar Processo                     ##
+echo   ###########################################################
 echo.
 echo ±------------------------------------------------------------- 
 echo ±-- Digite o nome do programa que deseja finalizar:
@@ -542,9 +523,6 @@ if %optionExit% EQU s (goto KILL_PROCESS) else (if %optionExit% EQU S (goto KILL
 title Script para Mudan‡a de IP -- Created by Generson Avelino
  
 cls
-echo   ************************************
-echo   ** Created by Generson Avelino    **
-echo   ************************************
 echo.
 echo   ########################################################
 echo   ##            Script para Mudan‡a de IP               ##
